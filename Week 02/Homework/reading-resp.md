@@ -1,0 +1,3 @@
+# Reading Response
+
+Wireframing is a crucial skill in website design, serving as a clear starting point for collaboration across teams. Since wireframes are easy to understand without specialized expertise, they help align everyone’s vision and encourage early discussions. This allows teams to clarify ideas, ask questions, and gather essential information before investing significant time and effort. By identifying potential issues early, wireframing reduces wasted time and streamlines the design process.
