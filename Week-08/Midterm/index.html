@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thnk Skn</title>
+  <link rel="stylesheet" href="style.css">
+ 
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ms+Madi&display=swap" rel="style.css">
+</head>
+
+<style>
+  .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .header-image-container img {
+        width: 100px; /* Adjust as needed */
+        height: auto; /* Maintains aspect ratio */
+    }
+
+    .NavBar {
+        margin-left: auto; /* Pushes the nav to the right */
+    }
+
+    .NavBar ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* .NavBar li {
+        display: inline;
+    } */
+
+    .NavBar a {
+        text-decoration: none;
+        color: #FEFAEE;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    
+  <header>
+    <div class="header-container">
+        <div class="header-image-container">
+            <img src="img/THNKSKN-Web-Logo.png" alt="Logo">
+        </div>
+        <nav class="NavBar">
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#Account">Account</a></li>
+                <li><a href="index.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <div class="flex-container">
+    <div>
+    <img class="ProductImage" src="img/skincare.png" alt="Product Image" >
+  </div>
+  <div>
+    <p>
+      Redefining Beauty Through Customization and Education <br>
+      Products and services designed to be tailored, educational and safe for consumers. <br>
+      Emphasizing the growing consumer demand for result driven <br>
+      outcomes and ethical practices in the beauty industry.<br>
+      </p>
+    </div>
+  </div>
+
+      <footer>
+        <p class="brand">THNK SKN&trade;<span style="font-size: 10px;">&reg;&copy;</span></p>
+        <ul>
+            
+            <li>Terms of Service</li>
+            <li>Cookie Preferences</li>
+            <li><a href="#form-opened">Contact Us</a></li>
+            <li><a href="#Instagram">Instagram</a></li>
+            <li><a href="#Twitter">Twitter</a></li>
+            <li><a href="#Pinterest">Pinterest</a></li>
+        </ul>
+   
+      </footer>
+
+        <fieldset id="form-opened" class="form-container">
+          <label for="FirstName">First Name</label>
+          <input type="text" name="FirstName" id="FirstName" placeholder="Jane" required>
+          <br>
+          <label for="LastName">Last Name</label>
+          <input type="text" name="LastName" id="LastName" placeholder="Smith" required>
+          <br>
+          <label for="Email">Email</label>
+          <input type="email" name="Email" id="Email" placeholder="netID@nyu.edu" required>
+          <br>
+          <label for="Message">Message</label>
+          <textarea name="Message" id="Message" cols="50" rows="10" placeholder="Your message" required></textarea>
+          
+          <!-- overwrites the #form-opened you see in the url, but there is no element with this id.
+          so it just resets the page. since you can add #literallyanything to the end of a url and nothing will happen.
+          try it. (you wont. why do i even type these things) -->
+          <a href="#form-closed">Cancel</a>
+          <a href="#form-closed">Send</a>
+
+      </fieldset>
+
+
+</body>
+</html>
+  
