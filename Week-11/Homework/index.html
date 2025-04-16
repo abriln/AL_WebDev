@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./img/favicon1.png" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ms+Madi&display=swap" rel="stylesheet">
+
+  <title>Products</title>
+
+  <style>
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .header-image-container img {
+      width: 100px;
+      height: auto;
+    }
+
+    .NavBar {
+      margin-left: auto;
+    }
+
+    .NavBar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .NavBar a {
+      text-decoration: none;
+      color: #887c7c;
+      font-weight: bold;
+    }
+
+    /* Layout: 3 items per row */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px;
+      justify-content: center;
+    }
+
+    .Item {
+      width: calc(33.333% - 40px);
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .Item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    /* Back to Top Button */
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 999;
+      font-size: 16px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #eadada;
+      color: #887c7c;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.3s ease;
+    }
+
+    #backToTopBtn:hover {
+      background-color: #f2ebe5;
+    }
+
+    @media (max-width: 900px) {
+      .Item {
+        width: calc(50% - 40px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .Item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-image-container">
+        <img src="img/THNKSKN-Web-Logo.png" alt="Logo">
+      </div>
+        
+      <div class="header-logo">
+        <img src="img/logo.png" alt="Logo" class="Logo Image">  
+      </div>
+
+      <nav class="NavBar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#Account">Account</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart-container">
+        <img src="img/cart.png" alt="Cart" class="cart-icon">
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Grid -->
+  <div class="container">
+    <div class="Item">
+      <p><strong>Clarifying <br> Cleanser <br>$15.00</strong></p>
+      <img src="./img/product1.png"/>
+    </div>
+
+    <div class="Item">
+      <p><strong>Brightening<br> Essence <br>$19.00</strong></p>
+      <img src="./img/product2.png"/>
+    </div>
+
+    <div class="Item">
+      <p><strong>Hyaluronic <br> Acid <br>$25.00</strong></p>
+      <img src="./img/product3.png"/>
+    </div>
+
+    <div class="Item">
+      <p><strong>Probiotic <br> Moisturizer<br>$25.00</strong></p>
+      <img src="./img/product4.png"/>
+    </div>
+
+    <div class="Item">
+      <p><strong>Barrier Repair <br> Cream <br>$38.00</strong></p>
+      <img src="./img/product5.png"/>
+    </div>
+
+    <div class="Item">
+      <p><strong>Eye <br> Cream <br>$15.00</strong></p>
+      <img src="./img/product6.png"/>
+    </div>
+
+    <div class="Item">
+        <p><strong>Clarifying <br> Cleanser <br>$15.00</strong></p>
+        <img src="./img/product1.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Brightening<br> Essence <br>$19.00</strong></p>
+        <img src="./img/product2.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Hyaluronic <br> Acid <br>$25.00</strong></p>
+        <img src="./img/product3.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Probiotic <br> Moisturizer<br>$25.00</strong></p>
+        <img src="./img/product4.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Barrier Repair <br> Cream <br>$38.00</strong></p>
+        <img src="./img/product5.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Eye <br> Cream <br>$15.00</strong></p>
+        <img src="./img/product6.png"/>
+      </div>
+
+      <div class="Item">
+        <p><strong>Clarifying <br> Cleanser <br>$15.00</strong></p>
+        <img src="./img/product1.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Brightening<br> Essence <br>$19.00</strong></p>
+        <img src="./img/product2.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Hyaluronic <br> Acid <br>$25.00</strong></p>
+        <img src="./img/product3.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Probiotic <br> Moisturizer<br>$25.00</strong></p>
+        <img src="./img/product4.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Barrier Repair <br> Cream <br>$38.00</strong></p>
+        <img src="./img/product5.png"/>
+      </div>
+  
+      <div class="Item">
+        <p><strong>Eye <br> Cream <br>$15.00</strong></p>
+        <img src="./img/product6.png"/>
+      </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Go to top">↑ Top</button>
+
+  <!-- Footer -->
+  <footer class="footer-class">
+    <p class="brand">THNK SKN&trade;<span style="font-size: 10px;">&reg;&copy;</span></p>
+    <ul>
+      <li>Terms of Service</li>
+      <li>Cookie Preferences</li>
+      <li><a href="#form-opened">Contact Us</a></li>
+      <li><a href="#Instagram">Instagram</a></li>
+      <li><a href="#Twitter">Twitter</a></li>
+      <li><a href="#Pinterest">Pinterest</a></li>
+    </ul>
+    <p>&copy; 2025 Thnk Skn. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
