@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="shortcut icon" href="./img/favicon1.png" type="image/svg+xml">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-products.css">
+    <title>Shop</title>
+  </head>
+
+
+  <body class="products-page">
+    <nav class="NavBar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index-home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#Account">Account</a></li>
+        <li><a href="#Cart"><img src="img/cart.png" alt="Cart" class="cart-icon-small"></a></li>
+      </ul>
+  
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  
+  
+    <script>
+        //JavaScript for Toggle Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+  
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+  
+      </script>
+    <section class="product-filters">
+      <div class="container">
+        <div class="filter-options">
+          <select class="filter-category">
+            <option>Category</option>
+            <option>All</option>
+            <option>Skincare</option>
+            <option>Moisturizers</option>
+          </select>
+          <select class="filter-price">
+            <option>Price</option>
+            <option>Under $25</option>
+            <option>$25-$50</option>
+            <option>Above $50</option>
+          </select>
+          <button class="filter-button">Apply Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="products">
+      <div class="container">
+        <div class="product-grid">
+          <div class="product-card skincare low">
+            <img src="img/product1.png" alt="Clarifying Cleanser" />
+            <a href="clarifying-cleanser.html#product-details" class="product-link">
+            <p><strong>Clarifying Cleanser</strong></p>
+            <span>$15.00</span>
+            <button>Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="product-card skincare low">
+            <img src="img/product2.png" alt="Brightening Essence" />
+            <a href="brightening-essence.html#product-details" class="product-link">
+            <p><strong>Brightening Essence</strong></p>
+            <span>$19.00</span>
+            <button>Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="product-card skincare mid">
+            <img src="img/product3.png" alt="Hyaluronic Acid" />
+            <p><strong>Hyaluronic Acid</strong></p>
+            <span>$25.00</span>
+            <button>Add to Cart</button>
+          </div>
+
+          <div class="product-card moisturizers mid">
+            <img src="img/product4.png" alt="Probiotic Moisturizer" />
+            <p><strong>Probiotic Moisturizer</strong></p>
+            <span>$25.00</span>
+            <button>Add to Cart</button>
+          </div>
+
+          <div class="product-card skincare low">
+            <img src="img/product6.png" alt="Eye Cream" />
+            <p><strong>Eye Cream</strong></p>
+            <span>$15.00</span>
+            <button>Add to Cart</button>
+          </div>
+
+          <div class="product-card moisturizers mid">
+            <a href="barrier-butter.html#product-details" class="product-link">
+            <img src="img/product5.png" alt="Barrier Repair Cream" />
+            <p><strong>Barrier Repair Cream</strong></p>
+            <span>$38.00</span>
+            <button>Add to Cart</button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const filterButton = document.querySelector('.filter-button');
+      const categorySelect = document.querySelector('.filter-category');
+      const priceSelect = document.querySelector('.filter-price');
+      const productCards = document.querySelectorAll('.product-card');
+    
+      const categoryMap = {
+        'Skincare': 'skincare',
+        'Moisturizers': 'moisturizers',
+        'All': 'all',
+        'Category': 'all'
+      };
+    
+      const priceMap = {
+        'Under $25': 'low',
+        '$25-$50': 'mid',
+        'Above $50': 'high',
+        'Price': 'all'
+      };
+    
+      filterButton.addEventListener('click', () => {
+      const selectedCategory = categoryMap[categorySelect.value] || 'all';
+      const selectedPrice = priceMap[priceSelect.value] || 'all';
+
+      productCards.forEach(card => {
+        const matchCategory = selectedCategory === 'all' || card.classList.contains(selectedCategory);
+        const matchPrice = selectedPrice === 'all' || card.classList.contains(selectedPrice);
+
+        if (matchCategory && matchPrice) {
+          card.style.display = '';  // revert to default layout behavior
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+    </script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <button id="backToTop" class="back-to-top">&#8593;</button> <!-- Arrow symbol (↑) -->
+    <script>
+      const backToTopBtn = document.getElementById('backToTop');
+    
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+    
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+
+        <!-- Footer Section -->
+        <footer>
+          <p class="brand">THNK SKN™<span style="font-size: 10px;">&reg;&copy;</span></p>
+          <ul>
+            <li>Terms of Service</li>
+            <li>Cookie Preferences</li>
+            <li><a href="javascript:void(0);" id="contact-us-link">Contact Us</a></li>
+            <li><a href="#Instagram">Instagram</a></li>
+            <li><a href="#Twitter">Twitter</a></li>
+            <li><a href="#Pinterest">Pinterest</a></li>
+          </ul>
+          <p> &copy; 2025 Thnk Skn. All rights reserved.</p>
+        </footer>
+    
+    
+        <!-- Contact Us Form (Initially hidden) -->
+    <div id="contact-us-form" class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="submit_form.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Your message"></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+      <button id="close-form" class="close-form">Close</button>
+    </div>
+    
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+          <script>
+            const contactUsLink = document.getElementById('contact-us-link');
+            const contactForm = document.getElementById('contact-us-form');
+            const closeFormButton = document.getElementById('close-form');
+          
+            contactUsLink.addEventListener('click', () => {
+              contactForm.style.display = 'block';
+            });
+          
+            closeFormButton.addEventListener('click', () => {
+              contactForm.style.display = 'none';
+            });
+          </script>
+    
+  </body>
+</html>
