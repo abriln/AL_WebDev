@@ -14,4 +14,4 @@ Added:
 - New .html and .css files: for 2 more products, Brightening Essence  and Clarifying Cleanseer (5 total for each)
 - Individual product pages are personalized
 
-**Videos had to be compressed for upload hence why they have a different name from the code. I've attached a video demo of the working site in "presentation" folder** under "website-demo.mov"
+**I've attached a video demo of the working site in "presentation" folder under "website-demo.mov"**
